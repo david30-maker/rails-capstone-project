@@ -87,4 +87,4 @@ gem 'rswag-ui'
 
 gem 'bcrypt', '~> 3.1.7'
 
-gem "devise", "~> 4.9"
+gem 'devise', '~> 4.9'
