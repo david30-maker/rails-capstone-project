@@ -80,9 +80,11 @@ gem 'rails-controller-testing'
 
 gem 'cancancan', '~> 1.9'
 
-gem 'devise', '~> 4.9'
-
 gem 'rswag'
 gem 'rswag-api'
 gem 'rswag-specs'
 gem 'rswag-ui'
+
+gem 'bcrypt', '~> 3.1.7'
+
+gem "devise", "~> 4.9"
