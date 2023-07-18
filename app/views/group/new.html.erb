@@ -1,0 +1,15 @@
+<div class="group_cotainer_new">
+<%= form_with model: @group, url: groups_path do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+   
+   <%= f.label :icon %>
+    <%= f.text_field :icon %>
+
+    <%= f.submit "Create Group" %>
+
+<% end %>
+
+<%= link_to 'Backto Groups', groups_path %>
+
+</div>

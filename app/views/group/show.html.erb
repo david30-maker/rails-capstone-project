@@ -1,0 +1,7 @@
+<div class="group_container_show">
+<h1><%= @group.name%></h1>
+<p><%= @group.icon %></p>
+<p>Total Amount: $<%= @total_amount %></p>
+<%= lik_to 'Back to Groups', groups_path %>
+<%= link_to 'View Items', group_items_path(@group) %>
+</div>
