@@ -6,7 +6,7 @@ class SessionsController < Devise::SessionsController
     redirect_to root_path, notice: 'You have been signed out successfully.'
   end
 
-  def set_current_user
-    @current_user = current_user
-  end
+  # def set_current_user
+  #   @current_user = current_user
+  # end
 end

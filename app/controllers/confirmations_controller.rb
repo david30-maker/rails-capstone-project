@@ -5,7 +5,7 @@ class ConfirmationsController < Devise::ConfirmationsController
 
   # GET /resource/confirmation?confirmation_token=abcdef
 
-  def set_current_user
-    @current_user = current_user
-  end
+  # def set_current_user
+  #   @current_user = current_user
+  # end
 end

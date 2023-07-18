@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_18_003748) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_18_082931) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "group_items", force: :cascade do |t|
+    t.bigint "group_id", null: false
+    t.bigint "item_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_group_items_on_group_id"
+    t.index ["item_id"], name: "index_group_items_on_item_id"
+  end
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
@@ -43,11 +52,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_003748) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.string "password_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "group_items", "groups"
+  add_foreign_key "group_items", "items"
   add_foreign_key "groups", "users"
   add_foreign_key "items", "groups"
   add_foreign_key "items", "users", column: "author_id"

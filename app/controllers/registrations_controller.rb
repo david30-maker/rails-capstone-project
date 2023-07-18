@@ -11,7 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
                                       keys: %i[email password password_confirmation current_password])
   end
 
-  def set_current_user
-    @current_user = current_user
-  end
+  # def set_current_user
+  #   @current_user = current_user
+  # end
 end

@@ -13,7 +13,7 @@ class PasswordsController < Devise::PasswordsController
 
   # The path used after resetting the password
 
-  def set_current_user
-    @current_user = current_user
-  end
+  # def set_current_user
+  #   @current_user = current_user
+  # end
 end
