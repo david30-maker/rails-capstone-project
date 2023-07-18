@@ -7,7 +7,7 @@ class User < ApplicationRecord
          before_create :name_decoration
 
   has_many :groups, class_name: 'Group', foreign_key: :user_id, dependent: :destroy
-  has_many :items, clas_name: 'Item', foreign_key: 'author_id', dependent: :destroy
+  has_many :items, class_name: 'Item', foreign_key: 'author_id', dependent: :destroy
   
 
   validates :name, presence: true, length: { maimum: 250, minimum: 2 }
