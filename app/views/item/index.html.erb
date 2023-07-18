@@ -1,0 +1,11 @@
+<div class="item_container">
+<h1>Items for <%= @group.name%></h1>
+<% @items.each do |item| %>
+<div class="item">
+<p>Amount: <%= item.amount %></p>
+</div>
+<% end %>
+
+<%= link_to 'Add Item', new_group_item_path(@group) %>
+<%= link_to 'Back to group', group_path(@group) %>
+</div>
