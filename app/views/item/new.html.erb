@@ -6,8 +6,11 @@
     <%= f.label :amount %>
     <%= f.number_field :amount %>
 
-    <%= f.submit 'Create Item' %>
+    <%= f.label :grups %>
+    <%= f.collection_select :group_ids, current_user.groups, :id, :name, {}, { multiple: true } %>
+
+    <%= f.submit 'Save' %>
 <% end %>
 
 <%= link_to 'Back Items', group_items_path(@group) %>
-<%= link_to 'Back Group', group_path(@group) %>
+</div>
