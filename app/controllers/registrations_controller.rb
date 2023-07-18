@@ -10,4 +10,8 @@ class RegistrationsController < Devise::RegistrationsController
     devise_parameter_sanitizer.permit(:account_update,
                                       keys: %i[email password password_confirmation current_password])
   end
+
+  def set_current_user
+    @current_user = current_user
+  end
 end
