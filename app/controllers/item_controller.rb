@@ -3,7 +3,9 @@ before_action :authenticate_user!
 
 def index 
     @group = current_user.groups.find(params[:group_id])
-    @items = @group.items
+    @items = @group.items.order(created_at: :desc)
+    @total_amount = @group.items.sum(:amount)
+    # @items = @group.items
 end
 
 def show
