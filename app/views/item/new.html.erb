@@ -7,7 +7,10 @@
     <%= f.label :amount %>
     <%= f.text_field :amount %>
 
-    <%= f.submit 'Create Item' %>
+     <%= f.submit 'Create Item' %>
+        
+    <%= f.select :group_id, @groups.pluck(:name,:id), {prompt:'Group'}, {class: "form-control"}%>
+
   <% end %>
 </div>
 

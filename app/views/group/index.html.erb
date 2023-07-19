@@ -1,17 +1,19 @@
-<div class="group-container">
-  <h1>Categories</h1>
-  <% @groups.each do |group| %>
-  <div class="group_item">
-  <p><%= "#{group.icon}" %></p>
-    <div class="name_date">
-      <h2><%= group.name %></h2>
-      <p><%= group.created_at.strftime("%B %d, %Y") %></p>
+  <div class="group-container">
+    <h1>Categories</h1>
+    <% @groups.each do |group| %>
+      <div class="group_item">
+        <p><%= "#{group.icon}" %></p>
+        <div class="name_date">
+          <h2><%= link_to group.name, group_path(group) %></h2>
+          <p><%= group.created_at.strftime("%B %d, %Y") %></p>
 
-      <p>
-      $<%= group.group_item %>
-      </p>
-      <%= link_to 'View Items', item_path(group) %>
-    </div>
-  <% end %>
-  <%= link_to 'Add New Group', new_group_path %>
-</div>
+          <p>
+            $<%= group.group_item %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+    <%= link_to 'Add New Group', new_group_path %>
+  </div>
+
+

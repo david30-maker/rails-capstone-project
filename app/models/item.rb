@@ -6,11 +6,12 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :amount, presence: true
 
+
   def add_group
-    gropus.length ||= 0
+    groups.length ||= 0
   end
 
   def add_unique_group(item)
-    groups << group unless groups.include?(item)
+    groups << item unless groups.include?(item)
   end
 end

@@ -3,7 +3,7 @@
 <% @items.each do |item| %>
 <%= item.amount %>
 <h1><%= item.name%></h1>
-<span><%= item.created.strftime('%e %B %Y') %> </span>
+<span><%= item.created_at.strftime('%e %B %Y') %> </span>
 </div>
 <Span>
 <%= item.add_group%> Category

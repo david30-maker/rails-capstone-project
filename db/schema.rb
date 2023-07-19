@@ -38,9 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_082931) do
     t.decimal "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "group_id", null: false
     t.index ["author_id"], name: "index_items_on_author_id"
-    t.index ["group_id"], name: "index_items_on_group_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,6 +57,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_082931) do
   add_foreign_key "group_items", "groups"
   add_foreign_key "group_items", "items"
   add_foreign_key "groups", "users"
-  add_foreign_key "items", "groups"
   add_foreign_key "items", "users", column: "author_id"
 end

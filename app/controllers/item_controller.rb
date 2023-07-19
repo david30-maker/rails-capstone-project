@@ -14,13 +14,16 @@ class ItemController < ApplicationController
 
   def new
     @item = Item.new
+    @groups = current_user.groups
   end
 
   def create
-    @item = Item.new(item_params)
+    @group = Group.find(item_params[:group_id])
+    @item = current_user.items.new(item_params.except(:group_id))
 
     respond_to do |format|
       if @item.save
+        @item.add_unique_group(@group)
         format.html { redirect_to item_path(@item), notice: 'Item was successfully created.' }
       else
         format.html { render :new, staus: :unprocessable_entity, alert: 'Something went wrong' }
@@ -38,6 +41,6 @@ class ItemController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :amount, :author_id)
+    params.require(:item).permit(:name, :amount, :author_id, :group_id)
   end
 end

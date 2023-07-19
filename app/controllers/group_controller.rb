@@ -9,6 +9,7 @@ class GroupController < ApplicationController
   def show
     @group = Group.includes(:items).find(params[:id])
     @group_items = @group.items
+    @total = calculate_total_amount(@group_items)
     @items = Item.where.not(id: @group.items.pluck(:id))
   end
 
@@ -18,8 +19,7 @@ class GroupController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
-
+    @group = Group.new(group_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @group.save
         format.html { redirect_to group_index_path, notice: 'Group created successfully' }
@@ -41,4 +41,11 @@ class GroupController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :icon, :user_id)
   end
+
+  private
+
+def calculate_total_amount(items)
+  items.sum(:amount)
+end
+
 end
