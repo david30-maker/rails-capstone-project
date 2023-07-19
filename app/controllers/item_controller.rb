@@ -1,12 +1,10 @@
 class ItemController < ApplicationController
-before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @user = current_user
     @items = @user.items.all.order(created_at: :desc)
   end
-
-
 
   def show
     @item = Item.find(params[:id])
@@ -15,32 +13,31 @@ before_action :authenticate_user!
   end
 
   def new
-      @item = Item.new
+    @item = Item.new
   end
 
-def create
+  def create
     @item = Item.new(item_params)
 
     respond_to do |format|
-    if @item.save
-       format.html { redirect_to item_path(@item), notice: 'Item was successfully created.'}
-    else
-       format.html { render :new, staus: :unprocessable_entity, alert: 'Something went wrong' }
+      if @item.save
+        format.html { redirect_to item_path(@item), notice: 'Item was successfully created.' }
+      else
+        format.html { render :new, staus: :unprocessable_entity, alert: 'Something went wrong' }
+      end
     end
-end
-end
+  end
 
-def add_group
+  def add_group
     @item = Item.find(params[:id])
     @group = Group.find(params[:format])
     @item.add_unique_group(@group)
     redirect_to item_path(@item)
-end
+  end
 
-private
+  private
 
-def item_params
+  def item_params
     params.require(:item).permit(:name, :amount, :author_id)
-end
-
+  end
 end

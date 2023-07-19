@@ -3,10 +3,8 @@ class Group < ApplicationRecord
   has_many :group_items, dependent: :destroy
   has_many :items, through: :group_items, dependent: :destroy
 
-
   validates :name, presence: true
   validates :icon, presence: true
-
 
   def add_unique_item(item)
     items << item unless items.include?(item)
@@ -19,5 +17,4 @@ class Group < ApplicationRecord
     end
     total
   end
-  
 end
