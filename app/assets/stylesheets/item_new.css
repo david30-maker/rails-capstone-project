@@ -1,0 +1,23 @@
+.item_container_new {
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.new_input {
+    display: block
+}
+
+.new_submit {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-control {
+    display: block;
+    margin: 10px auto;
+}

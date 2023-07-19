@@ -1,0 +1,38 @@
+.item_container {
+     margin-top: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius: 5px;
+}
+
+.item_index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #000;
+}
+
+.item_date {
+    margin-left: 45%;
+}
+
+.new_item_link {
+    text-decoration: none;
+    color: #460ab7;
+    margin-left: 10px;
+}
+
+.new_item_link:hover {
+    text-decoration: underline;
+    color: #460ab7;
+}
+
+.back_link {
+    text-decoration: none;
+    color: #460ab7;
+    margin-left: 83%;
+}

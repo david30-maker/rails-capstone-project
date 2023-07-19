@@ -1,16 +1,12 @@
 <div class="item_container">
-<div class="item">
 <% @items.each do |item| %>
-<%= item.amount %>
+<div class="item_index">
 <h1><%= item.name%></h1>
-<span><%= item.created_at.strftime('%e %B %Y') %> </span>
+$<%= item.amount %>
 </div>
-<Span>
-<%= item.add_group%> Category
-</span>
+<p class="item_date"><%= item.created_at.strftime('%e %B %Y') %> </p>
 <% end %>
 
-<%= link_to 'New Item', new_item_path %>
-
-<%= link_to 'Back to group', group_index_path %>
+<%= link_to 'New Item', new_item_path, class: 'new_item_link' %>
+<%= link_to 'Back to group', group_index_path, class: 'back_link' %>
 </div>

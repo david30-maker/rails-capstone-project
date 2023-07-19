@@ -1,15 +1,15 @@
-<div class="group_cotainer_new">
+<div class="group_container_new">
 <%= form_with model: @group, url: group_index_path do |f|%>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'group_input' %>
    
    <%= f.label :icon %>
-    <%= f.text_field :icon %>
+    <%= f.text_field :icon, class: 'group_input' %>
 
-    <%= f.submit "Save" %>
+    <%= f.submit "Save", class: 'group_input' %>
 
 <% end %>
 
-<%= link_to 'Backto Groups', group_index_path %>
+<%= link_to 'Backto Groups', group_index_path, class: 'group_new_link' %>
 
 </div>

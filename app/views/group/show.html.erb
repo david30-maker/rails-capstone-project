@@ -1,11 +1,16 @@
 <div class="group_container_show">
-<h1>Transcation History</h1>
-<p><%= @total %></p>
+
+<div class="title_show">
+<h1><%= @group.name %></h1>
+<p>$<%= @total %></p>
+</div>
 <% @group_items.each do |item| %>
-<h1><%= item.name%></h1>
-<p><%= item.amount %></p>
-<p><%= item.created_at.strftime('%A, %B %d, %Y') %></p>
+<div class="name_amount">
+<h3><%= item.name%></h3>
+<p>$<%= item.amount %></p>
+</div>
+<p class="show_date"><%= item.created_at.strftime('%A, %B %d, %Y') %></p>
 <% end %>
-<%= link_to 'Back to Groups', group_path %>
-<%= link_to 'View Items', item_path(@group) %>
+<%= link_to 'View Items', item_path(@group), class: 'view_link' %>
+<%= link_to 'Back to Groups', group_index_path, class: 'back_link' %>
 </div>
