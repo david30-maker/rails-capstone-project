@@ -1,7 +1,8 @@
 <a name="readme-top"></a>
 
 <div align="center">
-<h1> <b>Rail-blog-app</b> <hr/>
+
+  <h3><b>Daily Expense APP</b></h3>
 
 </div>
 
@@ -9,127 +10,116 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 \[Rails-blog-app\] ](#-rails-blog-app-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Daily\_Expense\_App\] ](#-daily_expense_app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
-  - [Key Features ](#key-features-)
+    - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
-    - [To get a local copy up and running, follow these steps.](#to-get-a-local-copy-up-and-running-follow-these-steps)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
-  - [Install](#install)
-  - [Usage](#usage)
-    - [- where filename.rb is the name of the Railsfile you want to run.](#--where-filenamerb-is-the-name-of-the-railsfile-you-want-to-run)
-  - [Run tests](#run-tests)
+    - [Install](#install)
+    - [Run tests](#run-tests)
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-<!-- PROJECT DESCRIPTION -->
+# 📖 [Daily_Expense_App] <a name="about-project"></a>
 
-# 📖 [Rails-blog-app] <a name="about-project"></a>
+> Daily Expense App helps you organise your spendings and keeps track of your expenses.
+It is built with Ruby on Rails and PostgreSQL.It is a web application that allows users to create an account and add their expenses.
 
-> ## The **Rails-blog-app** project 'BlogApp' app is a Ruby on Rails based that allows Users to make a comment on posts, like the posts and posts as well.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><p> <b>Ruby: </b> The primary programming language for the project.</p></li>
-    <li><p><b>Rails: </b> It is a ruby frameworks.</p></li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li>none</li>
-  </ul>
-</details>
-
-<details>
+<summary>Client</summary>
+<ul>
+<li>N/A</li>
+ </ul>
+<summary>Server</summary>
+<ul>
+<li>Ruby</li>
+<li>Ruby on Rails</li>
+</ul>
 <summary>Database</summary>
-  <ul>
-    <li>Postgresql</li>
-  </ul>
+<ul>
+<li>PostgreSQL</li>
+</ul>
 </details>
 
-<!-- Features -->
+### Key Features <a name="key-features"></a>
 
-## Key Features <a name="key-features"></a>
+<ul>
+<li>Gitflow execution</li>
+<li>Login page</li>
+<li>Signup page</li>
+<li>Use of models</li>
+<li>Add Category</li>
+<li>Add Expense</li>
+<li>View Expenses</li>
+<li>View Categories</li>
 
-- Users functionality
-- Comments section
-- Like section
-- Post section
+
+</ul>
+
+<h1>🚀 Live Demo</h1>
+<a href="">Live Demo</a>
+<h1>Video presentation</h1>
+<a href="https://www.loom.com/share/30bd1df0948e42288034708b25227b77">Click here</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- GETTING STARTED -->
-
 ## 💻 Getting Started <a name="getting-started"></a>
 
-### To get a local copy up and running, follow these steps.
+To get a local copy up and running, follow these steps.
+Coming soon.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-- A Computer (MAC or PC)
-- Code editor (VSCode,Atom etc...)
-- A browser (Chrome,Mozilla,Safari etc...)
-- Version Control System (Git and Github)
-- Rails installed: To run a Rails project, users must have Rails installed on their system. You can include the minimum required version of Rails needed to run the project.
+ <ul>
+<li>Node.js</li>
+<li>npm</li>
+<li>ruby 3.2.2</li>
+<li>rails
+</li>
+<li>PostgreSQL</li>
+ </ul>
 
 ### Setup
 
 Clone this repository to your desired folder:
+Use Terminal:
 
-```sh
-  cd my-folder
-  git clone git@github.com:david30-maker/rails-blog-app.git
-```
+cd my-folder
 
-## Install
+git clone git@github.com:david30-maker/rails-capstone-project.git
+
+### Install
 
 Install this project with:
 
-- Install RailsInstaller [Win](https://railsinstaller.org/)
-- Install Rails for [macOS](https://www.rails-lang.org/en/documentation/installation/#homebrew)
-- Install Rails for [Linux](https://www.makeuseof.com/install-rails-on-linux/)
+cd 'project name'
 
-## Usage
+"npm i" to install all dependencies
 
-To run a Rails file in the command line, follow these steps:
+"bundle install" to install all gems
 
-Open a command prompt or terminal window on your computer.
+"rails s" to run the server
 
-Navigate to the root directory where the Rails file is stored using the cd command.
+### Run tests
 
-Type the following command to run the Ruby file:
+"bundle exec rspec" to run the tests
 
-```sh
-rails server
-```
-
-### - where filename.rb is the name of the Railsfile you want to run.
-
-## Run tests
-
-```sh
-rspec spec/filename.rb
-```
-
-<!-- AUTHORS -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
 
@@ -139,77 +129,39 @@ rspec spec/filename.rb
 - Twitter: [@davidigbo1](https://twitter.com/davidigbo1)
 - LinkedIn: [davidigbo/](https://www.linkedin.com/in/davidigbo/)
 
-👤 **Taiwo Enoch**
-
-- GitHub: [@TaiwoEnoch](https://github.com/TaiwoEnoch)
-- Twitter: [@taiwoenoch4](https://twitter.com/taiwoenoch4)
-- LinkedIn: [@taiwo01/](https://www.linkedin.com/in/taiwo01/)
-
-👤 **Lengushuru Charles**
-
-- GitHub: [@lengushuru](https://github.com/lengushuru)
-- Twitter: [@lengushuru](https://twitter.com/lengush)
-- LinkedIn: [Lengushuru Charles](https://linkedin.com/in/lengushuru)
-
-  
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ]   Processing data
-- [ ] Add controller and view components
-- [ ] Add authorization
+<ul>
+  <li>Add better Navigation</li>
+  <li>Better User Experience</li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Contributions, issues, and feature requests are welcome!
 
-<!-- SUPPORT -->
+Feel free to check the [issues page](../../issues/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> If you like this project rate it and give it a star...
+Please give a ⭐️ if you like this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> We would like to thank the [Microverse team](https://www.microverse.org/) for allowing me to work on this Rails BlogApp project.
+I would like to thank Gregoire Vella for his amazing design which was the inspiration for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ <a name="faq"></a>
-
-- **How do I install and run the project?**
-
-  - To install and run the project, you will need to have Rails installed on your computer. Once you have Rails installed, you can download the project files and run the program from the command line using the following command:
-    <br/>
-
-- **What technologies and libraries are used in the project?**
-
-  - The project is written in Ruby on Rails and does not require any external libraries or dependencies.
-
-- **How can I contribute to the project?**
-
-  - Contributions to the project are welcome! Please feel free to submit bug reports, feature requests, or pull requests on the project's GitHub repository.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
