@@ -2,30 +2,37 @@ class ItemsController < ApplicationController
 before_action :authenticate_user!
 
 def index 
-    @group = current_user.groups.find(params[:group_id])
-    @items = @group.items.order(created_at: :desc)
-    @total_amount = @group.items.sum(:amount)
-    # @items = @group.items
+   @user = current_user
+    @items = @user.items.all.order(created_at: :desc)
 end
 
 def show
-    @group = current_user.groups.find(params[:group_id])
-    @item = @group.items.find(params[:id])
+    @item = Item.find(params[:group_id])
+    @group_items = @item.groups
+    @groups = Group.where.not(id: @item.groups.pluck(:id))
 end
 
 def new
-    @group = current_user.groups.find(params[:group_id])
-    @item = @group.items.new
+    @item = Item.new
 end
 
 def create
-    @group = current_user.groups.find(params[:group_id])
-    @item = @group.items.new(item_params)
+    @item = Item.new(item_params)
+
+    respond_to do |format|
     if @item.save
-        redirect_to group_item_path(@group), notice: 'Item was successfully created.'
+       format.html { redirect_to item_path(@item), notice: 'Item was successfully created.'}
     else
-        render :new
+       format.html { render :new, staus: :unprocessable_entity, alert: 'Something went wrong' }
     end
+end
+end
+
+def add_group
+    @item = Item.find(params[:id])
+    @group = Group.find(params[:format])
+    @item.add_unique_group(@group)
+    redirect_to item_path(@item)
 end
 
 private
