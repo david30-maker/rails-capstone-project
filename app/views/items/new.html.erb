@@ -6,7 +6,7 @@
     <%= f.label :amount %>
     <%= f.number_field :amount %>
 
-    <%= f.label :grups %>
+    <%= f.label :groups %>
     <%= f.collection_select :group_ids, current_user.groups, :id, :name, {}, { multiple: true } %>
 
     <%= f.submit 'Save' %>
