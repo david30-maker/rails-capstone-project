@@ -4,12 +4,13 @@ class GroupsController < ApplicationController
     def index
         @user = current_user
         @groups = @user.groups.all.order(created_at: :desc)
-    end
+      end
 
     def show
         @group = Group.includes(:items).find(params[:id])
         @group_items = @group.items
         @items = Item.where.not(id: @group.items.pluck(:id))
+        @group = Group.find(params[:id])
     end
 
     def new

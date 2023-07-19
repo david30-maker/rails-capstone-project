@@ -4,6 +4,8 @@ before_action :authenticate_user!
 def index 
    @user = current_user
     @items = @user.items.all.order(created_at: :desc)
+    @group = Group.find(params[:group_id])
+    @items = @group.items
 end
 
 def show
@@ -13,11 +15,13 @@ def show
 end
 
 def new
-    @item = Item.new
+    @group = Group.find(params[:group_id])
+    @item = @group.items.new
 end
 
 def create
-    @item = Item.new(item_params)
+    @group = Group.find(params[:group_id])
+    @item = @group.items.new(item_params)
 
     respond_to do |format|
     if @item.save
