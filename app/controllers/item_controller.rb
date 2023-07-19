@@ -1,27 +1,25 @@
-class ItemsController < ApplicationController
+class ItemController < ApplicationController
 before_action :authenticate_user!
 
-def index 
-   @user = current_user
+  def index
+    @user = current_user
     @items = @user.items.all.order(created_at: :desc)
-    @group = Group.find(params[:group_id])
-    @items = @group.items
-end
+  end
 
-def show
-    @item = Item.find(params[:group_id])
+
+
+  def show
+    @item = Item.find(params[:id])
     @group_items = @item.groups
     @groups = Group.where.not(id: @item.groups.pluck(:id))
-end
+  end
 
-def new
-    @group = Group.find(params[:group_id])
-    @item = @group.items.new
-end
+  def new
+      @item = Item.new
+  end
 
 def create
-    @group = Group.find(params[:group_id])
-    @item = @group.items.new(item_params)
+    @item = Item.new(item_params)
 
     respond_to do |format|
     if @item.save

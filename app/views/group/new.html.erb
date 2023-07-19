@@ -1,5 +1,5 @@
 <div class="group_cotainer_new">
-<%= form_with model: @group, url: groups_path do |f|%>
+<%= form_with model: @group, url: group_index_path do |f|%>
     <%= f.label :name %>
     <%= f.text_field :name %>
    
@@ -10,6 +10,6 @@
 
 <% end %>
 
-<%= link_to 'Backto Groups', groups_path %>
+<%= link_to 'Backto Groups', group_index_path %>
 
 </div>

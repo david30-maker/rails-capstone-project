@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
-
   devise_for :users
-  
-  resources :groups, only: [:index, :new, :create] do
-    resources :items, only: [:index, :new, :create]
+  resources :group do
+    member do
+      post 'add_item', to: 'group#add_item'
+    end
   end
-  
+  resources :item do
+    member do
+      post 'add_group', to: 'item#add_group'
+    end
+  end
   root to: "splash#index"
-  
+
 end
 

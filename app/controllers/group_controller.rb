@@ -1,4 +1,4 @@
-class GroupsController < ApplicationController
+class GroupController < ApplicationController
     before_action :authenticate_user!
 
     def index
@@ -6,12 +6,11 @@ class GroupsController < ApplicationController
         @groups = @user.groups.all.order(created_at: :desc)
       end
 
-    def show
+      def show
         @group = Group.includes(:items).find(params[:id])
         @group_items = @group.items
         @items = Item.where.not(id: @group.items.pluck(:id))
-        @group = Group.find(params[:id])
-    end
+      end
 
     def new
         @group = Group.new
@@ -20,15 +19,15 @@ class GroupsController < ApplicationController
 
     def create
         @group = Group.new(group_params)
-
+      
         respond_to do |format|
-        if @group.save
-            format.html {redirect_to groups_path, notice: "Group created successfully" }
-        else
+          if @group.save
+            format.html { redirect_to group_index_path, notice: "Group created successfully" }
+          else
             format.html { render :new, status: :unprocessable_entity, alert: "Something went wrong" }
+          end
         end
-    end
-    end
+      end
 
     def add_item
         @group = Group.find(params[:id])
