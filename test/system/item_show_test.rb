@@ -4,7 +4,7 @@ require 'factory_bot'
 class GroupItemsIntegrationTest < ActionDispatch::IntegrationTest
   include FactoryBot::Syntax::Methods
   def setup
-    @group_items = create_list(:group_item, 5) 
+    @group_items = create_list(:group_item, 5)
   end
 
   test 'displays group items table correctly' do

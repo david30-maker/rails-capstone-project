@@ -10,17 +10,17 @@
 }
 
 .group_input {
-    display: block;
+  display: block;
   margin: 10px;
 }
 
 .group_new_link {
-    text-decoration: none;
-    color: #501dc5;
-    margin: 10px;
+  text-decoration: none;
+  color: #501dc5;
+  margin: 10px;
 }
 
 .group_new_link:hover {
-    text-decoration: underline;
-    color: #501dc5;
+  text-decoration: underline;
+  color: #501dc5;
 }

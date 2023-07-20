@@ -33,5 +33,5 @@ class GroupShowIntegrationTest < ActionDispatch::IntegrationTest
 
     assert_select 'a.view_link', text: 'View Items'
     assert_select 'a.back_link', text: 'Back to Groups'
-end
+  end
 end

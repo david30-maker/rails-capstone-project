@@ -43,10 +43,7 @@ class GroupController < ApplicationController
     params.require(:group).permit(:name, :icon, :user_id)
   end
 
-  private
-
-def calculate_total_amount(items)
-  items.sum(:amount)
-end
-
+  def calculate_total_amount(items)
+    items.sum(:amount)
+  end
 end

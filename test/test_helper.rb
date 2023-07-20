@@ -2,7 +2,6 @@ ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 require 'rails/test_help'
 
-
 # test/test_helper.rb
 
 require 'factory_bot'

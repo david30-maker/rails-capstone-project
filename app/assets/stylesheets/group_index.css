@@ -1,56 +1,56 @@
 .group-container {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .group_title {
-    margin-left: 45%;
-    margin-bottom: 20px;
+  margin-left: 45%;
+  margin-bottom: 20px;
 }
 
 .group_item {
-   display: flex;
-   justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #000;
 }
 
 .group_link {
-    text-decoration: none;
-    color: #692ceb;
+  text-decoration: none;
+  color: #692ceb;
 }
 
 .group_link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .group_amount {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .group_name {
-    font-size: 20px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .group_date {
-   margin-left: 45%;
+  margin-left: 45%;
 }
 
 .add_link {
-    text-decoration: none;
-    color: #692ceb;
-    margin-left: 90%;
-    margin-bottom: 20px;
+  text-decoration: none;
+  color: #692ceb;
+  margin-left: 90%;
+  margin-bottom: 20px;
 }
 
 .add_link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

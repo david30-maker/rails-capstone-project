@@ -44,5 +44,4 @@ class ItemController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :amount, :author_id, group_id: [])
   end
-
 end
