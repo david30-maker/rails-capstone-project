@@ -22,17 +22,32 @@
 
 .new_item_link {
   text-decoration: none;
-  color: #460ab7;
-  margin-left: 10px;
+  color: #fff;
 }
 
 .new_item_link:hover {
   text-decoration: underline;
-  color: #460ab7;
+  color: #fff;
 }
 
 .back_link {
   text-decoration: none;
   color: #460ab7;
-  margin-left: 83%;
+  margin-left: 90%;
+}
+
+.add_new_container {
+  margin-top: 105px;
+ 
+  padding: 20px;
+  border: 1px solid rgba(140, 239, 9, 0.8);
+  background-color: rgba(140, 239, 9, 0.8)
+}
+
+.add_new {
+  background-color: rgba(140, 239, 9, 0.8);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  height: 50%;
+  text-align: center;
 }

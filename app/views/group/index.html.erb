@@ -10,7 +10,9 @@
         </div>
           <p class="group_date"><%= group.created_at.strftime("%B %d, %Y") %></p>
     <% end %>
-    <%= link_to 'Add New Group', new_group_path, class: 'add_link' %>
   </div>
-
-
+  <div class="add_new_container">
+<div class="add_new">
+ <%= link_to 'Add New Category', new_group_path, class: 'add_link' %>
+</div>
+</div>

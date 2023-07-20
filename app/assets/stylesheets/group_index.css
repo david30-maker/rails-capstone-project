@@ -4,7 +4,7 @@
   margin-left: 20px;
   margin-right: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #a5a1a1;
   border-radius: 5px;
 }
 
@@ -19,6 +19,8 @@
   align-items: center;
   margin-bottom: 10px;
   border: 1px solid #000;
+  background-color: #fff;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
 .group_link {
@@ -46,11 +48,25 @@
 
 .add_link {
   text-decoration: none;
-  color: #692ceb;
-  margin-left: 90%;
-  margin-bottom: 20px;
+  color: #fff;
 }
 
 .add_link:hover {
   text-decoration: underline;
+}
+
+.add_new_container {
+  margin-top: 105px;
+ 
+  padding: 20px;
+  border: 1px solid rgba(140, 239, 9, 0.8);
+  background-color: rgba(140, 239, 9, 0.8)
+}
+
+.add_new {
+  background-color: rgba(140, 239, 9, 0.8);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  height: 50%;
+  text-align: center;
 }

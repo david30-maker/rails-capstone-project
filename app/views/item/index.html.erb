@@ -6,7 +6,11 @@ $<%= item.amount %>
 </div>
 <p class="item_date"><%= item.created_at.strftime('%e %B %Y') %> </p>
 <% end %>
-
-<%= link_to 'New Item', new_item_path, class: 'new_item_link' %>
 <%= link_to 'Back to group', group_index_path, class: 'back_link' %>
+</div>
+
+  <div class="add_new_container">
+<div class="add_new">
+<%= link_to 'Add Expenses', new_item_path, class: 'new_item_link' %>
+</div>
 </div>
