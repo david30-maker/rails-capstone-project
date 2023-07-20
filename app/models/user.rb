@@ -9,13 +9,22 @@ class User < ApplicationRecord
   has_many :groups, class_name: 'Group', foreign_key: :user_id, dependent: :destroy
   has_many :items, class_name: 'Item', foreign_key: 'author_id', dependent: :destroy
 
-  validates :name, presence: true, length: { maimum: 250, minimum: 2 }
-  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true, length: {  minimum: 2, maximum: 250 }
+  validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
   validates :password, presence: true, length: { minimum: 6 }
+
 
   private
 
   def name_decoration
     self.name = name.capitalize if name.blank?
+  end
+
+  private
+
+  def case_sensitive_email_uniqueness
+    if email_changed? && self.class.exists?(email: email)
+      errors.add(:email, "has already been taken")
+    end
   end
 end
