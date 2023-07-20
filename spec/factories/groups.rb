@@ -1,10 +1,7 @@
-# spec/factories/groups.rb
 FactoryBot.define do
   factory :group do
-    sequence(:name) { |n| "Group #{n}" }
+    name { 'Sample Group' }
     icon { 'icon.png' }
-    association :user, factory: :user
+    # Any other attributes you need to set for the Group model
   end
 end
-
-  

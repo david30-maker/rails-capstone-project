@@ -17,12 +17,13 @@
       <ul class="navbar-nav">
         <%= link_to "Category", group_index_path, class: "nav-link fs-5 text text-light" %>
     <%= link_to "All Expenses", item_index_path, class: "nav-link fs-5 text-light" %>
- 
-        <%= button_to "Logout".html_safe,
+    <%= link_to "Add Expense", new_item_path, class: "nav-link fs-5 text-light" %>
+    <%= button_to "Logout".html_safe,
         destroy_user_session_path,
         method: :delete,
         class: "nav-link fs-5 text-light" %>
 
+        <%= link_to "TRANSACTION", group_index_path, class: "nav-link fs-5 text text-light" %>
       </ul>
     </div>
   </div>
