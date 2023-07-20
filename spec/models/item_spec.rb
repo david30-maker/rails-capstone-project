@@ -30,7 +30,5 @@ RSpec.describe Item, type: :model do
       item = Item.new(name: "Example Item", author: user)
       expect(item).not_to be_valid
     end
-
-    # Additional tests...
   end
 end
