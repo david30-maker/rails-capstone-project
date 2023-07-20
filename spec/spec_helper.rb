@@ -1,6 +1,10 @@
 # spec/spec_helper.rb
 
 # spec/spec_helper.rb
+require 'factory_bot_rails'
+
+
+# spec/spec_helper.rb
 
 require File.expand_path('../config/environment', __dir__)
 require 'capybara/rspec'

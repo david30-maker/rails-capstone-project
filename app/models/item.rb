@@ -6,7 +6,6 @@ class Item < ApplicationRecord
   validates :name, presence: true
   validates :amount, presence: true
 
-
   def add_group
     groups.length ||= 0
   end
