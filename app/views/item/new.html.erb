@@ -5,12 +5,16 @@
     <%= f.text_field :name, class: 'new_input' %>
 
     <%= f.label :amount %>
-    <%= f.text_field :amount, class: 'new_input'  %>
+    <%= f.number_field :amount, class: 'new_input'  %>
 
-     <%= f.submit 'Create Item', class: 'new_submit'  %>
-        
-    <%= f.select :group_id, @groups.pluck(:name,:id), {prompt:'Group'}, {class: "form-control"}%>
+    <%= f.label :icon %>
+    <%= f.text_field :icon, class: 'new_input'  %>
+    
+    <%= select_tag(:group_id, options_for_select(@groups.pluck(:name, :id))) %>
 
+
+    <%= f.submit 'Create Item', class: 'new_submit'  %>
+      
   <% end %>
 </div>
 

@@ -1,7 +1,8 @@
 <div class="item_container">
 <% @items.each do |item| %>
 <div class="item_index">
-<h1><%= item.name%></h1>
+<%= item.icon %>
+<h2><%= item.name %></h2>
 $<%= item.amount %>
 </div>
 <p class="item_date"><%= item.created_at.strftime('%e %B %Y') %> </p>
