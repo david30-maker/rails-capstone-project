@@ -1,4 +1,4 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class CategoriesIntegrationTest < ApplicationSystemTestCase
   include Devise::Test::IntegrationHelpers
@@ -11,16 +11,14 @@ class CategoriesIntegrationTest < ApplicationSystemTestCase
   test 'user can sign in and access the groups index page' do
     sign_in(@user)
     visit group_index_path
-    assert_text "Categories"
-    assert_selector "h1.group_title", wait: 5
+    assert_text 'Categories'
+    assert_selector 'h1.group_title', wait: 5
 
     @groups.each do |group|
       assert_text group.name
       assert_text group.icon
       assert_text "$#{group.items.sum(:amount).to_f}"
     end
-    assert_selector "a", text:"Add New Category"
-
+    assert_selector 'a', text: 'Add New Category'
   end
 end
-

@@ -1,4 +1,4 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class ItemsIndexTest < ApplicationSystemTestCase
   include Devise::Test::IntegrationHelpers
@@ -18,9 +18,9 @@ class ItemsIndexTest < ApplicationSystemTestCase
     @items.each do |item|
       assert_text item.name
       assert_text "$#{item.amount.to_f}"
-    assert_text item.created_at.strftime('%e %B %Y')
+      assert_text item.created_at.strftime('%e %B %Y')
     end
 
-    assert_selector "a", text:"Add Expenses"
+    assert_selector 'a', text: 'Add Expenses'
   end
 end

@@ -1,4 +1,4 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class GroupShowTest < ApplicationSystemTestCase
   include Devise::Test::IntegrationHelpers
@@ -21,6 +21,6 @@ class GroupShowTest < ApplicationSystemTestCase
       assert_text item.created_at.strftime('%A, %B %d, %Y')
     end
 
-    assert_selector "a", text:"Back to Group"
+    assert_selector 'a', text: 'Back to Group'
   end
 end
