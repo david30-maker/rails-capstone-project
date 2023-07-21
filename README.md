@@ -29,7 +29,7 @@
 
 # 📖 [Daily_Expense_App] <a name="about-project"></a>
 
-> Daily Expense App helps you organise your spendings and keeps track of your expenses.
+> Daily Expense App helps you organize your expenses and keeps track of your expenses.
 It is built with Ruby on Rails and PostgreSQL.It is a web application that allows users to create an account and add their expenses.
 
 
@@ -57,7 +57,6 @@ It is built with Ruby on Rails and PostgreSQL.It is a web application that allow
 ### Key Features <a name="key-features"></a>
 
 <ul>
-<li>Gitflow execution</li>
 <li>Login page</li>
 <li>Signup page</li>
 <li>Use of models</li>
@@ -70,7 +69,7 @@ It is built with Ruby on Rails and PostgreSQL.It is a web application that allow
 </ul>
 
 <h1>🚀 Live Demo</h1>
-<a href="">Live Demo</a>
+<a href="https://okpah.onrender.com/">Live Demo</a>
 <h1>Video presentation</h1>
 <a href="https://www.loom.com/share/30bd1df0948e42288034708b25227b77">Click here</a>
 
@@ -144,7 +143,6 @@ cd 'project name'
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
