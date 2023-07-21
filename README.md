@@ -57,10 +57,8 @@ It is built with Ruby on Rails and PostgreSQL.It is a web application that allow
 ### Key Features <a name="key-features"></a>
 
 <ul>
-<li>Gitflow execution</li>
 <li>Login page</li>
 <li>Signup page</li>
-<li>Use of models</li>
 <li>Add Category</li>
 <li>Add Expense</li>
 <li>View Expenses</li>
@@ -70,9 +68,9 @@ It is built with Ruby on Rails and PostgreSQL.It is a web application that allow
 </ul>
 
 <h1>🚀 Live Demo</h1>
-<a href="">Live Demo</a>
+<a href="https://okpah.onrender.com">Live Demo</a>
 <h1>Video presentation</h1>
-<a href="https://www.loom.com/share/30bd1df0948e42288034708b25227b77">Click here</a>
+<a href="">Click here</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
