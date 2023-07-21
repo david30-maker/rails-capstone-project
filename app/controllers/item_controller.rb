@@ -1,16 +1,18 @@
 class ItemController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource
-
   def index
     @user = current_user
     @items = @user.items.all.order(created_at: :desc)
   end
 
   def show
-    @item = Item.find(params[:id])
+    @item = Item.find_by(id: params[:id])
+    if @item.nil?
+      redirect_to root_path, alert: "Item not found."
+    else
     @group_items = @item.groups
     @groups = Group.where.not(id: @item.groups.pluck(:id))
+  end
   end
 
   def new

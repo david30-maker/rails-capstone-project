@@ -1,5 +1,13 @@
 <div class="sign_up_container">
-<h2 class="sign_up_title">Register</h2>
+<div>
+  <nav class="log_in_nav">
+    <%= link_to(root_path, class: "log_in_link") do %>
+      <i class="fa-solid fa-arrow-left-long"></i>
+    <% end %>
+    <h4 class="log_in_title">Register</h4>
+    <%= link_to "Log In", new_user_session_path %>
+  </nav>
+</div>
 <div class="sign_up_form">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -14,26 +22,20 @@
 
   
   
-    <%
+   <div class="field">
+ <%
 =begin%>
  <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %>)</em>
-    <% end %><br /> 
+    <% end %> 
 <%
 =end%>
-
-  <div class="field">
     <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", class: "field" %>
   </div>
 
-  <%
-=begin%>
  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",  placeholder: "confirm password", class: "field"  %>
   </div> 
-<%
-=end%>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

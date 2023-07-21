@@ -1,6 +1,5 @@
 class GroupController < ApplicationController
   before_action :authenticate_user!
-  load_and_authorize_resource
 
   def index
     @user = current_user
@@ -35,7 +34,7 @@ class GroupController < ApplicationController
   def add_item
     @group = Group.find(params[:id])
     @item = Item.find(params[:format])
-    @group.add_unique_item(@item)
+    @group << @item
     redirect_to group_path(@group), notice: 'Item added to group'
   end
 

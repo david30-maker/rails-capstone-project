@@ -10,11 +10,11 @@ class Group < ApplicationRecord
   #   items << item unless items.include?(item)
   # end
 
-  def group_item
-    total = 0
-    items.each do |item|
-      total += item.amount
-    end
-    total
-  end
+  # def group_item
+  #   total = 0
+  #   items.each do |item|
+  #     total += item.amount
+  #   end
+  #   total
+  # end
 end
