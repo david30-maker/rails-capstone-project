@@ -129,7 +129,6 @@ cd 'project name'
 - [ ] Add authorization
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
