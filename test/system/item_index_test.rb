@@ -1,27 +1,26 @@
-# require 'test_helper'
+require "application_system_test_case"
 
-# class ItemIndexIntegrationTest < ActionDispatch::IntegrationTest
-#   def setup
-#     # @items = create_list(:item, 5)
-#     @items = items
-#   end
+class ItemsIndexTest < ApplicationSystemTestCase
+  include Devise::Test::IntegrationHelpers
 
-#   test 'displays item index page correctly' do
-#     visit item_index_path
+  def setup
+    @user = users(:one)
+    @groups = groups.select { |group| group.user_id == @user.id }
+    @items = items.select { |item| item.author_id == @user.id }
+    @groups.first.items << @items.first
+    @groups.second.items << @items.second
+  end
 
-#     assert_response :success
-#     assert_select 'div.item_container'
+  test 'displays all items for a signed in user correctly' do
+    sign_in(@user)
+    visit item_index_path
 
-#     @items.each do |item|
-#       assert_select 'div.item_index' do
-#         assert_select 'h1', text: item.name
-#         assert_select 'p', text: "$#{item.amount}"
-#       end
+    @items.each do |item|
+      assert_text item.name
+      assert_text "$#{item.amount.to_f}"
+    assert_text item.created_at.strftime('%e %B %Y')
+    end
 
-#       assert_select 'p.item_date', text: item.created_at.strftime('%e %B %Y')
-#     end
-
-#     assert_select 'a.new_item_link', text: 'New Item'
-#     assert_select 'a.back_link', text: 'Back to group'
-#   end
-# end
+    assert_selector "a", text:"Add Expenses"
+  end
+end

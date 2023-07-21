@@ -1,8 +1,12 @@
 one:
-  name: MyString
+  name: Group 1
   icon: MyString
   user: one
 two:
-  name: MyString2
+  name: Group 2
+  icon: MyString
+  user: one
+three:
+  name: Group 3
   icon: MyString2
   user: two

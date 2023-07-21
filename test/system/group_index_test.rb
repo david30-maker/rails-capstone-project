@@ -18,8 +18,9 @@ class CategoriesIntegrationTest < ApplicationSystemTestCase
       assert_text group.name
       assert_text group.icon
       assert_text "$#{group.items.sum(:amount).to_f}"
-      assert_selector "a", text:"Add New Category"
     end
+    assert_selector "a", text:"Add New Category"
+
   end
 end
 
