@@ -4,7 +4,7 @@ class GroupController < ApplicationController
 
   def index
     @user = current_user
-    @groups = @user.groups.all.order(created_at: :desc)
+    @groups = @user.groups.includes(:items).order(created_at: :desc)
   end
 
   def show
@@ -12,6 +12,8 @@ class GroupController < ApplicationController
     @group_items = @group.items
     @total = calculate_total_amount(@group_items)
     @items = Item.where.not(id: @group.items.pluck(:id))
+
+    render :show
   end
 
   def new
@@ -44,6 +46,6 @@ class GroupController < ApplicationController
   end
 
   def calculate_total_amount(items)
-    items.sum(:amount)
+    items.sum(:amount).to_f
   end
 end

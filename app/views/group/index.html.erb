@@ -5,7 +5,7 @@
         <p><%= "#{group.icon}" %></p>
           <h2><%= link_to group.name, group_path(group), class: 'group_link'%></h2>
           <p class="group_amount">
-            $<%= group.group_item %>
+            $<%= group.items.sum(:amount).to_f %>
           </p>
         </div>
           <p class="group_date"><%= group.created_at.strftime("%B %d, %Y") %></p>

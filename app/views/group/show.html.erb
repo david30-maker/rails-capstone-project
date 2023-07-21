@@ -12,5 +12,10 @@
 <p class="show_date"><%= item.created_at.strftime('%A, %B %d, %Y') %></p>
 <% end %>
 <%= link_to 'View Items', item_path(@group), class: 'view_link' %>
-<%= link_to 'Back to Group', group_index_path, class: 'back_link' %>
+</div>
+
+  <div class="add_new_container">
+<div class="add_new">
+<%= link_to 'Back to Group', group_index_path, class: 'back_to_group' %>
+</div>
 </div>

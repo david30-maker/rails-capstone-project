@@ -1,29 +1,25 @@
-require 'test_helper'
-require 'factory_bot'
+require "application_system_test_case"
 
-class CategoriesIntegrationTest < ActionDispatch::IntegrationTest
-  include FactoryBot::Syntax::Methods
+class CategoriesIntegrationTest < ApplicationSystemTestCase
+  include Devise::Test::IntegrationHelpers
 
   def setup
-    @group = create(:group)
+    @user = users(:one)
+    @groups = groups.select { |group| group.user_id == @user.id }
   end
 
-  test 'displays categories correctly' do
-    visit groups_path
-
-    assert_response :success
-    assert_select 'h1.group_title', text: 'Categories'
+  test 'user can sign in and access the groups index page' do
+    sign_in(@user)
+    visit group_index_path
+    assert_text "Categories"
+    assert_selector "h1.group_title", wait: 5
 
     @groups.each do |group|
-      assert_select ".group_item[data-group-id='#{group.id}']" do
-        assert_select 'p', text: group.icon.to_s
-        assert_select 'h2.group_link', text: group.name.to_s
-        assert_select 'p.group_amount', text: "$#{group.group_item}"
-      end
-
-      assert_select 'p.group_date', text: group.created_at.strftime('%B %d, %Y')
+      assert_text group.name
+      assert_text group.icon
+      assert_text "$#{group.items.sum(:amount).to_f}"
+      assert_selector "a", text:"Add New Category"
     end
-
-    assert_select 'a.add_link', text: 'Add New Group'
   end
 end
+
