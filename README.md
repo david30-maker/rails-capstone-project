@@ -71,7 +71,7 @@ It is built with Ruby on Rails and PostgreSQL.It is a web application that allow
 <h1>🚀 Live Demo</h1>
 <a href="https://okpah.onrender.com/">Live Demo</a>
 <h1>Video presentation</h1>
-<a href="https://www.loom.com/share/30bd1df0948e42288034708b25227b77">Click here</a>
+<a href="https://www.loom.com/share/5bfc3b9093b24f978739155f40cc06cb?sid=14503eb8-61d6-44b2-8ce8-9543529979f1">Click here</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
