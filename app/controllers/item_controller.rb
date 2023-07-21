@@ -31,13 +31,6 @@ class ItemController < ApplicationController
     end
   end
 
-  # def add_group
-  #   @item = Item.find(params[:id])
-  #   @group = Group.find(params[:format])
-  #   @item.add_unique_group(@group)
-  #   redirect_to item_path(@item)
-  # end
-
   private
 
   def item_params

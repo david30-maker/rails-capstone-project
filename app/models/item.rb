@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   has_many :groups, through: :group_items
 
   validates :name, presence: true
-  validates :amount, presence: true
+  validates :amount, presence: true, numericality: { only_integer: true, other_than: 0 }
 
   def add_group
     groups.length ||= 0

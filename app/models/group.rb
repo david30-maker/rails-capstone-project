@@ -6,9 +6,9 @@ class Group < ApplicationRecord
   validates :name, presence: true
   validates :icon, presence: true
 
-  def add_unique_item(item)
-    items << item unless items.include?(item)
-  end
+  # def add_unique_item(item)
+  #   items << item unless items.include?(item)
+  # end
 
   def group_item
     total = 0
