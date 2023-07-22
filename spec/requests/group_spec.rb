@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe GroupController, type: :controller do
   let(:user) { create(:user) }
-  let(:group_1) {create(:group, user: user)}
+  let(:group1) { create(:group, user: some_user) }
 
   describe 'GET #index' do
     context 'when user is authenticated' do
@@ -33,7 +33,7 @@ RSpec.describe GroupController, type: :controller do
       end
 
       it 'renders the show template' do
-        get :show, params: {id: group_1.id}
+        get :show, params: { id: group_1.id }
         expect(response).to have_http_status(:ok)
         expect(response).to render_template(:show)
       end
@@ -55,7 +55,7 @@ RSpec.describe GroupController, type: :controller do
 
       context 'with incorrect params' do
         it 'returns error response' do
-          post :create, params: { group: { name: '', icon: ''} }
+          post :create, params: { group: { name: '', icon: '' } }
           expect(response).to have_http_status(:unprocessable_entity)
           expect(response).to render_template(:new)
         end
@@ -63,7 +63,7 @@ RSpec.describe GroupController, type: :controller do
 
       context 'with correct params' do
         it 'returns success response' do
-          post :create, params: { group: { name: 'G1', icon: '123'} }
+          post :create, params: { group: { name: 'G1', icon: '123' } }
           expect(response).to have_http_status(:found)
           expect(response).to redirect_to(group_index_path)
         end

@@ -19,7 +19,7 @@
 .amount-name {
   display: flex;
   justify-content: space-between;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .amount-name h2 {
@@ -28,7 +28,7 @@
 
 .group_item {
   margin-bottom: 10px;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .group_p {
@@ -60,7 +60,7 @@
 
 .add_link {
   text-decoration: none;
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 
 .add_link:hover {
@@ -76,7 +76,7 @@
 
 .add_new {
   background-color: #19c45d;
-  border: 1px solid #FBFBFB;
+  border: 1px solid #fbfbfb;
   border-radius: 5px;
   height: 50%;
   text-align: center;

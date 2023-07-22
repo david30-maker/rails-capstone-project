@@ -3,10 +3,9 @@ require 'rails_helper'
 
 RSpec.describe ItemController, type: :controller do
   let(:user) { create(:user) }
-  let(:group_1) {create(:group, user: user)}
-  let(:item_1) {create(:item, author: user, amount: 200)}
-  let(:item_2) {create(:item, author: user, amount: 300)}
-
+  let(:group1) { create(:group, user: some_user) }
+  let(:item1) { create(:item, author: user, amount: 200) }
+  let(:item2) { create(:item, author: user, amount: 300) }
   describe 'GET #index' do
     context 'when user is authenticated' do
       before do
@@ -35,7 +34,7 @@ RSpec.describe ItemController, type: :controller do
       end
 
       it 'renders the show template' do
-        get :show, params: {id: item_1.id}
+        get :show, params: { id: item_1.id }
         expect(response).to have_http_status(:ok)
         expect(response).to render_template(:show)
       end

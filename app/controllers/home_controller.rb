@@ -6,6 +6,4 @@ class HomeController < ApplicationController
       render :splash
     end
   end
-
 end
-

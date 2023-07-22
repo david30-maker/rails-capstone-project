@@ -43,7 +43,7 @@
 
 .back_to_group {
   text-decoration: none;
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 
 .back_to_group:hover {
@@ -60,7 +60,7 @@
 
 .add_new {
   background-color: #19c45d;
-  border: 1px solid #FBFBFB;
+  border: 1px solid #fbfbfb;
   border-radius: 5px;
   height: 50%;
   text-align: center;

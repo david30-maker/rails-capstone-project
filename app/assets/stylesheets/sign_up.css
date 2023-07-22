@@ -6,15 +6,15 @@ body {
   width: 100%;
   margin-left: -2%;
   margin-right: -10%;
- padding-left: 2%;
+  padding-left: 2%;
 }
 
 .sign_up_container {
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  background-color: #FBFBFB;
-  border: 1px solid #FBFBFB;
+  background-color: #fbfbfb;
+  border: 1px solid #fbfbfb;
 }
 
 .sign_up_title {
@@ -25,10 +25,10 @@ body {
   margin: 5px;
 }
 
-.log_in_sign{
- color:#FBFBFB
+.log_in_sign {
+  color: #fbfbfb;
 }
 
 .sign_up_in {
-margin-left: -2%;
+  margin-left: -2%;
 }

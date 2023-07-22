@@ -8,11 +8,11 @@ class ItemController < ApplicationController
   def show
     @item = Item.find_by(id: params[:id])
     if @item.nil?
-      redirect_to root_path, alert: "Item not found."
+      redirect_to root_path, alert: 'Item not found.'
     else
-    @group_items = @item.groups
-    @groups = Group.where.not(id: @item.groups.pluck(:id))
-  end
+      @group_items = @item.groups
+      @groups = Group.where.not(id: @item.groups.pluck(:id))
+    end
   end
 
   def new

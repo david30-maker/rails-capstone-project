@@ -1,14 +1,13 @@
- .item_con {
+.item_con {
   margin-top: 100px;
-   margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
-
- .amount-item {
-  width:100%;
+.amount-item {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 .amount-item h2 {
@@ -17,7 +16,7 @@
 
 .icon_item {
   margin-bottom: 10px;
-  background-color: #FBFBFB
+  background-color: #fbfbfb;
 }
 
 .item_date {
@@ -26,12 +25,12 @@
 
 .new_item_link {
   text-decoration: none;
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 
 .new_item_link:hover {
   text-decoration: underline;
-  color: #FBFBFB;
+  color: #fbfbfb;
 }
 
 .back_link {
@@ -49,8 +48,8 @@
 
 .add_new {
   background-color: #19c45d;
-  border: 1px solid #FBFBFB;
+  border: 1px solid #fbfbfb;
   border-radius: 5px;
   height: 50%;
   text-align: center;
-}  
+}
