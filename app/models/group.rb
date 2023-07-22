@@ -6,7 +6,7 @@ class Group < ApplicationRecord
   include ImageUploader::Attachment(:icon)
 
   validates :name, presence: true
-  validates :icon, presence: true
+  # validates :icon, presence: true
 
   # def add_unique_item(item)
   #   items << item unless items.include?(item)

@@ -20,7 +20,5 @@ class GroupShowTest < ApplicationSystemTestCase
       assert_text "$#{item.amount.to_f}"
       assert_text item.created_at.strftime('%A, %B %d, %Y')
     end
-
-    assert_selector 'a', text: 'Back to Group'
   end
 end

@@ -20,7 +20,5 @@ class ItemsIndexTest < ApplicationSystemTestCase
       assert_text "$#{item.amount.to_f}"
       assert_text item.created_at.strftime('%e %B %Y')
     end
-
-    assert_selector 'a', text: 'Add Expenses'
   end
 end

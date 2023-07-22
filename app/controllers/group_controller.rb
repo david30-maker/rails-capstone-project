@@ -17,12 +17,11 @@ class GroupController < ApplicationController
 
   def new
     @group = Group.new
-    @group_options = Group.pluck(:name, :icon)
+    @group_options = Group.pluck(:name, :id)
   end
 
   def create
     @group = Group.new(group_params.merge(user_id: current_user.id))
-    debugger
     respond_to do |format|
       if @group.save
         format.html { redirect_to group_index_path, notice: 'Group created successfully' }

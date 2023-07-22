@@ -56,7 +56,7 @@ RSpec.describe ItemController, type: :controller do
 
       context 'with correct params' do
         it 'returns success response' do
-          post :create, params: { item: { name: 'Item 1', icon: '123', amount: 200 }, group_id: group1.id }
+          post :create, params: { item: { name: 'Item 1', amount: 200 }, group_id: group1.id }
           expect(response).to have_http_status(:found)
           expect(response).to redirect_to(group_index_path)
         end
