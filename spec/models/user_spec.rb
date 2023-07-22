@@ -25,6 +25,4 @@ RSpec.describe User, type: :model do
       user.save
     end
   end
-
-  # Additional tests...
 end
