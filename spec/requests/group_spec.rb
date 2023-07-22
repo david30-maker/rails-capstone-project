@@ -1,9 +1,8 @@
-# spec/controllers/group_controller_spec.rb
 require 'rails_helper'
 
 RSpec.describe GroupController, type: :controller do
   let(:user) { create(:user) }
-  let(:group1) { create(:group, user: some_user) }
+  let(:group1) { create(:group, user:) }
 
   describe 'GET #index' do
     context 'when user is authenticated' do
@@ -33,7 +32,7 @@ RSpec.describe GroupController, type: :controller do
       end
 
       it 'renders the show template' do
-        get :show, params: { id: group_1.id }
+        get :show, params: { id: group1.id }
         expect(response).to have_http_status(:ok)
         expect(response).to render_template(:show)
       end
