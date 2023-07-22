@@ -8,7 +8,7 @@
     <%= f.number_field :amount, class: 'new_input'  %>
 
     <%= f.label :icon %>
-    <%= f.text_field :icon, class: 'new_input'  %>
+    <%= f.file_field :icon, class: 'new_input'  %>
     
     <div class="select_input">
     <%= select_tag(:group_id, options_for_select(@groups.pluck(:name, :id))) %>

@@ -40,16 +40,19 @@
 }
 
 .add_new_container {
-  margin-top: 105px;
+  margin-top: 20%S;
   padding: 20px;
-  border: 1px solid #19c45d;
-  background-color: #19c45d;
+  border: 1px solid #5fb523;
+  background-color: #5fb523;
 }
 
 .add_new {
-  background-color: #19c45d;
+  font-size: 30px;
+  font-weight: 300;
+  background-color: #5fb523;
   border: 1px solid #fbfbfb;
   border-radius: 5px;
-  height: 50%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
 }

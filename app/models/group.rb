@@ -3,6 +3,8 @@ class Group < ApplicationRecord
   has_many :group_items, dependent: :destroy
   has_many :items, through: :group_items, dependent: :destroy
 
+  include ImageUploader::Attachment(:icon)
+
   validates :name, presence: true
   validates :icon, presence: true
 

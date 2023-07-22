@@ -10,16 +10,17 @@
 <p>$<%= item.amount %></p>
 </div>
 <div class="group_item">
-<p><%= item.icon %></p>
+
+<%= image_tag item.icon_url if item.icon %>
+
 <p class="show_date"><%= item.created_at.strftime('%A, %B %d, %Y') %></p>
 </div>
 </div>
 <% end %>
-<%= link_to 'View Items', item_path(@group), class: 'view_link' %>
 </div>
 
-  <div class="add_back_container">
-<div class="add_new">
-<%= link_to 'Back to Group', group_index_path, class: 'back_to_group' %>
+  <div class="add_expenses_container">
+<div class="add_new_show">
+<%= link_to 'Add Expenses', new_item_path, class: 'new_item_link' %>
 </div>
 </div>

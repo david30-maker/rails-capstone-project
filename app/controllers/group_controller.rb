@@ -22,6 +22,7 @@ class GroupController < ApplicationController
 
   def create
     @group = Group.new(group_params.merge(user_id: current_user.id))
+    debugger
     respond_to do |format|
       if @group.save
         format.html { redirect_to group_index_path, notice: 'Group created successfully' }

@@ -6,7 +6,7 @@
 $<%= item.amount %>
 </div>
 <div class="icon_item">
-<%= item.icon %>
+<%= image_tag item.icon_url if item.icon %>
 <p class="item_date"><%= item.created_at.strftime('%e %B %Y') %> </p>
 </div>
 <% end %>
@@ -15,6 +15,6 @@ $<%= item.amount %>
 
 <div class="add_new_container">
 <div class="add_new">
-<%= link_to 'Add Expenses', new_item_path, class: 'new_item_link' %>
+<%= link_to 'Back to Group', group_index_path, class: 'back_to_group' %>
 </div>
 </div>

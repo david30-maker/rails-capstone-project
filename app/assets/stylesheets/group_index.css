@@ -1,6 +1,9 @@
+body {
+  height: fit-content;
+}
+
 .group-container {
-  min-height: 100vh;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
@@ -9,7 +12,7 @@
 
 .group_title {
   margin-left: 30%;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .group {
@@ -67,17 +70,23 @@
   text-decoration: underline;
 }
 
-.add_new_container {
-  margin-top: 100%;
+.add_new_container_index {
+  margin-top: 10px;
   padding: 20px;
   border: 1px solid #5fb523;
   background-color: #5fb523;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.add_new {
+.add_new_index {
+  font-size: 30px;
+  font-weight: 300;
   background-color: #5fb523;
   border: 1px solid #fbfbfb;
   border-radius: 5px;
-  height: 50%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
 }

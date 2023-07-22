@@ -1,10 +1,10 @@
+
 .group_container_show {
-  height: 50%;
-  margin-top: 100px;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
 }
 
 .title_show {
@@ -51,17 +51,22 @@
   color: #3778c2;
 }
 
-.add_back_container {
-  margin-top: 500px;
+.add_expenses_container {
   padding: 20px;
   border: 1px solid #5fb523;
   background-color: #5fb523;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
-.add_new {
+.add_new_show {
+  font-size: 30px;
+  font-weight: 300;
   background-color: #5fb523;
   border: 1px solid #fbfbfb;
   border-radius: 5px;
-  height: 50%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
 }
