@@ -32,13 +32,13 @@
 
 .view_link {
   text-decoration: none;
-  color: #692ceb;
+  color: #3778c2;
   margin-left: 75%;
 }
 
 .view_link:hover {
   text-decoration: underline;
-  color: #692ceb;
+  color: #3778c2;
 }
 
 .back_to_group {
@@ -48,18 +48,18 @@
 
 .back_to_group:hover {
   text-decoration: underline;
-  color: #692ceb;
+  color: #3778c2;
 }
 
 .add_back_container {
   margin-top: 500px;
   padding: 20px;
-  border: 1px solid #19c45d;
-  background-color: #19c45d;
+  border: 1px solid #5fb523;
+  background-color: #5fb523;
 }
 
 .add_new {
-  background-color: #19c45d;
+  background-color: #5fb523;
   border: 1px solid #fbfbfb;
   border-radius: 5px;
   height: 50%;

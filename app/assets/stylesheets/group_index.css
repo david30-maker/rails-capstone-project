@@ -37,7 +37,7 @@
 
 .group_link {
   text-decoration: none;
-  color: #692ceb;
+  color: #3778c2;
 }
 
 .group_link:hover {
@@ -70,12 +70,12 @@
 .add_new_container {
   margin-top: 100%;
   padding: 20px;
-  border: 1px solid #19c45d;
-  background-color: #19c45d;
+  border: 1px solid #5fb523;
+  background-color: #5fb523;
 }
 
 .add_new {
-  background-color: #19c45d;
+  background-color: #5fb523;
   border: 1px solid #fbfbfb;
   border-radius: 5px;
   height: 50%;
