@@ -1,37 +1,43 @@
-.item_container {
+ .item_con {
   margin-top: 100px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 5px;
+   margin-bottom: 0px;
 }
 
-.item_index {
+
+ .amount-item {
+  width:100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 10px;
+  background-color: #FBFBFB;
+}
+
+.amount-item h2 {
+  margin-left: 25%;
+}
+
+.icon_item {
+  margin-bottom: 10px;
+  background-color: #FBFBFB
 }
 
 .item_date {
-  margin-left: 45%;
+  margin-left: 25%;
 }
 
 .new_item_link {
   text-decoration: none;
-  color: #fff;
+  color: #FBFBFB;
 }
 
 .new_item_link:hover {
   text-decoration: underline;
-  color: #fff;
+  color: #FBFBFB;
 }
 
 .back_link {
+  margin-left: 70%;
   text-decoration: none;
   color: #460ab7;
-  margin-left: 90%;
 }
 
 .add_new_container {
@@ -43,8 +49,8 @@
 
 .add_new {
   background-color: #19c45d;
-  border: 1px solid #fff;
+  border: 1px solid #FBFBFB;
   border-radius: 5px;
   height: 50%;
   text-align: center;
-}
+}  

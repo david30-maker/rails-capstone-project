@@ -1,14 +1,13 @@
-<div class="log_in_form">
 <div>
   <nav class="log_in_nav">
     <%= link_to(root_path, class: "log_in_link") do %>
       <i class="fa-solid fa-arrow-left-long"></i>
     <% end %>
     <h4 class="log_in_title">Log in</h4>
-     <%= link_to "Sign Up", new_user_registration_path %>
+     <%= link_to "Sign Up", new_user_registration_path, class: 'sing_up_log' %>
   </nav>
 </div>
-
+<div class="log_in_form">
 <div class="log_form">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -31,10 +30,4 @@
   </div>
   </div>
 <% end %>
-
-<%
-=begin%>
- <%= render "devise/shared/links", class: 'link_devise' %> 
-<%
-=end%>
 </div>

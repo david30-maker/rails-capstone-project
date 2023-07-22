@@ -4,16 +4,17 @@ body {
 
 .field {
   width: 100%;
-  margin-left: 0%;
-  padding-left: 2%;
+  margin-left: -2%;
+  margin-right: -10%;
+ padding-left: 2%;
 }
 
 .sign_up_container {
   width: 100%;
   margin-top: 20px;
   padding: 10px;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: #FBFBFB;
+  border: 1px solid #FBFBFB;
 }
 
 .sign_up_title {
@@ -24,6 +25,10 @@ body {
   margin: 5px;
 }
 
-.actions {
-  margin-top: 10px;
+.log_in_sign{
+ color:#FBFBFB
+}
+
+.sign_up_in {
+margin-left: -2%;
 }
