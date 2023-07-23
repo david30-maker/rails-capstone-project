@@ -1,0 +1,24 @@
+<div class="item_container_new">
+<div class="item_container_new">
+  <%= form_with model: @item, url: item_index_path do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'new_input' %>
+
+    <%= f.label :amount %>
+    <%= f.number_field :amount, class: 'new_input'  %>
+
+    <%= f.label :icon %>
+    <%= f.file_field :icon, class: 'new_input'  %>
+    
+    <div class="select_input">
+    <%= select_tag(:group_id, options_for_select(@groups.pluck(:name, :id))) %>
+    </div>
+
+
+    <%= f.submit 'Create Item', class: 'new_submit'  %>
+      
+  <% end %>
+</div>
+
+  <%= link_to 'Back Items', item_index_path %>
+</div>

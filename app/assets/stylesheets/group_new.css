@@ -1,0 +1,26 @@
+.group_container_new {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #434b54;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.group_input {
+  display: block;
+  margin: 10px;
+}
+
+.group_new_link {
+  text-decoration: none;
+  color: #3778c2;
+  margin: 10px;
+}
+
+.group_new_link:hover {
+  text-decoration: underline;
+  color: #3778c2;
+}

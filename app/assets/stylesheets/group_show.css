@@ -1,0 +1,72 @@
+
+.group_container_show {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.title_show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.name_amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.amount-name h3 {
+  margin-left: 60px;
+}
+
+.show_date {
+  margin-left: 24%;
+}
+
+.view_link {
+  text-decoration: none;
+  color: #3778c2;
+  margin-left: 75%;
+}
+
+.view_link:hover {
+  text-decoration: underline;
+  color: #3778c2;
+}
+
+.back_to_group {
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+.back_to_group:hover {
+  text-decoration: underline;
+  color: #3778c2;
+}
+
+.add_expenses_container {
+  padding: 20px;
+  border: 1px solid #5fb523;
+  background-color: #5fb523;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.add_new_show {
+  font-size: 30px;
+  font-weight: 300;
+  background-color: #5fb523;
+  border: 1px solid #fbfbfb;
+  border-radius: 5px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}

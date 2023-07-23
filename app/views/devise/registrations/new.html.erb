@@ -1,0 +1,38 @@
+<div>
+  <nav class="log_in_nav">
+    <%= link_to(root_path, class: "log_in_link") do %>
+      <i class="fa-solid fa-arrow-left-long"></i>
+    <% end %>
+    <h4 class="log_in_title">Register</h4>
+    <%= link_to "Log In", new_user_session_path, class: 'log_in_sign' %>
+  </nav>
+</div>
+<div class="sign_up_container">
+<div class="sign_up_form">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocompelte: 'name', placeholder: "fullname", class: "field" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class: "field"  %>
+  </div>
+
+  
+  
+   <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", class: "field" %>
+  </div>
+
+ <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",  placeholder: "confirm password", class: "field"  %>
+  </div> 
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: 'sign_up_in' %>
+  </div>
+<% end %>
+</div>
+</div>

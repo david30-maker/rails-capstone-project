@@ -1,0 +1,36 @@
+<div class="nav_container">
+<nav class="navbar navbar-expand-lg bg-lightblue">
+  <div class="container-fluid">
+ <span
+  class="navbar-toggler-icon"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarNav"
+  aria-controls="navbarNav"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  &#9776;
+</span>
+
+
+   <%
+=begin%>
+ <%= link_to "Home", group_index_path, class: "nav-link fs-3 text-light" %> 
+<%
+=end%>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <%= link_to "Category", group_index_path, class: "nav-link fs-5 text text-light" %>
+    <%= link_to "All Expenses", item_index_path, class: "nav-link fs-5 text-light" %>
+   
+    <%= button_to "Logout".html_safe,
+        destroy_user_session_path,
+        method: :delete,
+        class: "nav-link fs-5 text-light" %>
+
+        <%= link_to "TRANSACTIONS", group_index_path, class: "nav-link fs-5 text text-light" %>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>

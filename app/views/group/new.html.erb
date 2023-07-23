@@ -1,0 +1,17 @@
+<div class="group_container_new">
+<%= form_with model: @group, url: group_index_path do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'group_input' %>
+
+    <div class="field">
+        <%= f.label :icon %>
+        <%= f.file_field :icon %>
+</div>
+
+    <%= f.submit "Save", class: 'group_input' %>
+
+<% end %>
+
+<%= link_to 'Backto Groups', group_index_path, class: 'group_new_link' %>
+
+</div>
