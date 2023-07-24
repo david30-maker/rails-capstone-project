@@ -1,7 +1,6 @@
-require "application_system_test_case"
+require 'application_system_test_case'
 
 class CategoriesIntegrationTest < ApplicationSystemTestCase
-
   def setup
     @user = users(:one)
     @groups = groups.select { |group| group.user_id == @user.id }
@@ -17,7 +16,6 @@ class CategoriesIntegrationTest < ApplicationSystemTestCase
   end
 end
 
-  
 #     visit group_path(@group)
 
 #     assert_response :success

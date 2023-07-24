@@ -20,7 +20,7 @@
   margin-bottom: 10px;
   border: 1px solid #000;
   background-color: #fff;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 }
 
 .group_link {
@@ -57,10 +57,9 @@
 
 .add_new_container {
   margin-top: 105px;
- 
   padding: 20px;
   border: 1px solid rgba(140, 239, 9, 0.8);
-  background-color: rgba(140, 239, 9, 0.8)
+  background-color: rgba(140, 239, 9, 0.8);
 }
 
 .add_new {
