@@ -1,8 +1,9 @@
 one:
-  name: MyString
-  icon: MyString
+  name: Group 1
   user: one
 two:
-  name: MyString2
-  icon: MyString2
+  name: Group 2
+  user: one
+three:
+  name: Group 3
   user: two

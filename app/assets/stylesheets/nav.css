@@ -1,8 +1,12 @@
 .nav_container {
-  background-color: rgb(71, 71, 206);
+  background-color: #3778c2;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+.navbar-toggler-icon {
+  color: #fbfbfb;
 }

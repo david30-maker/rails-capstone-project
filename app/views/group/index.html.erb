@@ -1,18 +1,22 @@
   <div class="group-container">
     <h1 class="group_title">Categories</h1>
     <% @groups.each do |group| %>
-      <div class="group_item">
-        <p><%= "#{group.icon}" %></p>
-          <h2><%= link_to group.name, group_path(group), class: 'group_link'%></h2>
+    <div class="group">
+    <div class="amount-name">
+    <h2><%= link_to group.name, group_path(group), class: 'group_link'%></h2>
           <p class="group_amount">
             $<%= group.items.sum(:amount).to_f %>
           </p>
-        </div>
+    </div>
+      <div class="group_item">
+        <%= image_tag group.icon_url if group.icon %>
           <p class="group_date"><%= group.created_at.strftime("%B %d, %Y") %></p>
+          </div>
+    </div>
     <% end %>
   </div>
-  <div class="add_new_container">
-<div class="add_new">
+  <div class="add_new_container_index">
+<div class="add_new_index">
  <%= link_to 'Add New Category', new_group_path, class: 'add_link' %>
 </div>
 </div>

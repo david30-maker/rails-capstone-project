@@ -90,3 +90,7 @@ gem 'rswag-ui'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise', '~> 4.9'
+
+gem 'shrine', '~> 3.3'
+
+gem 'image_processing', '~> 1.12', '>= 1.12.1'

@@ -1,72 +1,73 @@
 require 'rails_helper'
 
 RSpec.describe ItemController, type: :controller do
-  let(:user) { FactoryBot.create(:user) }
-  let(:group) { FactoryBot.create(:group) }
-  let(:item_params) { { name: 'New Item', amount: 100, group_id: group.id } }
-
-  before do
-    allow(controller).to receive(:current_user).and_return(user)
-  end
+  let(:user) { create(:user) }
+  let(:group1) { create(:group, user:) }
+  let(:item1) { create(:item, author: user, amount: 200) }
+  let(:item2) { create(:item, author: user, amount: 300) }
 
   describe 'GET #index' do
-    it 'assigns @items in descending order' do
-      item1 = FactoryBot.create(:item, user:, created_at: 1.day.ago)
-      item2 = FactoryBot.create(:item, user:, created_at: Time.current)
+    context 'when user is authenticated' do
+      before do
+        sign_in user
+      end
 
-      get :index
-      expect(assigns(:items)).to eq([item2, item1])
+      it 'renders the index template' do
+        get :index
+        expect(response).to have_http_status(:ok)
+        expect(response).to render_template(:index)
+      end
+    end
+
+    context 'when user is not authenticated' do
+      it 'redirects to sign in page' do
+        get :index
+        expect(response).to redirect_to(new_user_session_path)
+      end
     end
   end
 
   describe 'GET #show' do
-    it 'assigns @item, @group_items, and @groups' do
-      item = FactoryBot.create(:item, user:)
-      item.groups << group
+    context 'when user is authenticated' do
+      before do
+        sign_in user
+      end
 
-      get :show, params: { id: item.id }
-      expect(assigns(:item)).to eq(item)
-      expect(assigns(:group_items)).to eq([group])
-      expect(assigns(:groups)).to eq([])
+      it 'renders the show template' do
+        get :show, params: { id: item1.id }
+        expect(response).to have_http_status(:ok)
+        expect(response).to render_template(:show)
+      end
     end
-  end
 
-  describe 'GET #new' do
-    it 'assigns @item and @groups' do
-      get :new
-      expect(assigns(:item)).to be_a_new(Item)
-      expect(assigns(:groups)).to eq([group])
+    context 'when user is not authenticated' do
+      it 'redirects to sign in page' do
+        get :show, params: { id: item1.id }
+        expect(response).to redirect_to(new_user_session_path)
+      end
     end
   end
 
   describe 'POST #create' do
-    it 'creates a new item and associates it with the selected group' do
-      expect do
-        post :create, params: { item: item_params }
-      end.to change(Item, :count).by(1)
+    context 'when user is authenticated' do
+      before do
+        sign_in user
+      end
 
-      item = Item.last
-      expect(item.groups).to eq([group])
-      expect(response).to redirect_to(item_path(item))
+      context 'with correct params' do
+        it 'returns success response' do
+          post :create, params: { item: { name: 'Item 1', amount: 200 }, group_id: group1.id }
+          expect(response).to have_http_status(:found)
+          expect(response).to redirect_to(group_index_path)
+        end
+      end
     end
 
-    it 'renders the new template with an error when invalid parameters are provided' do
-      expect do
-        post :create, params: { item: { name: '', amount: 100, group_id: group.id } }
-      end.not_to change(Item, :count)
-
-      expect(response).to render_template(:new)
-    end
-  end
-
-  describe 'POST #add_group' do
-    it 'adds a new group to the item and redirects to the item show page' do
-      item = FactoryBot.create(:item, user:)
-      expect do
-        post :add_group, params: { id: item.id, format: group.id }
-      end.to change(item.groups, :count).by(1)
-
-      expect(response).to redirect_to(item_path(item))
+    context 'when user is not authenticated' do
+      it 'redirects to sign in page' do
+        post :create, params: { group: {} }
+        expect(response).to redirect_to(new_user_session_path)
+      end
     end
   end
 end

@@ -4,7 +4,7 @@
   margin-right: 20px;
   margin-bottom: 20px;
   padding: 20px;
-  border: 1px solid #000;
+  border: 1px solid #434b54;
   border-radius: 5px;
   background-color: #fff;
 }
@@ -16,11 +16,11 @@
 
 .group_new_link {
   text-decoration: none;
-  color: #501dc5;
+  color: #3778c2;
   margin: 10px;
 }
 
 .group_new_link:hover {
   text-decoration: underline;
-  color: #501dc5;
+  color: #3778c2;
 }

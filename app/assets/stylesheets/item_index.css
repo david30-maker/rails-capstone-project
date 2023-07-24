@@ -1,52 +1,58 @@
-.item_container {
+.item_con {
   margin-top: 100px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #000;
-  border-radius: 5px;
+  margin-bottom: 0;
 }
 
-.item_index {
+.amount-item {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 10px;
-  border: 1px solid #000;
+  background-color: #fbfbfb;
+}
+
+.amount-item h2 {
+  margin-left: 25%;
+}
+
+.icon_item {
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
 }
 
 .item_date {
-  margin-left: 45%;
+  margin-left: 25%;
 }
 
 .new_item_link {
   text-decoration: none;
-  color: #fff;
+  color: #fbfbfb;
 }
 
 .new_item_link:hover {
   text-decoration: underline;
-  color: #fff;
+  color: #fbfbfb;
 }
 
 .back_link {
+  margin-left: 70%;
   text-decoration: none;
-  color: #460ab7;
-  margin-left: 90%;
+  color: #3778c2;
 }
 
 .add_new_container {
-  margin-top: 105px;
+  margin-top: 5%;
   padding: 20px;
-  border: 1px solid rgba(140, 239, 9, 0.8);
-  background-color: rgba(140, 239, 9, 0.8);
+  border: 1px solid #5fb523;
+  background-color: #5fb523;
 }
 
 .add_new {
-  background-color: rgba(140, 239, 9, 0.8);
-  border: 1px solid #fff;
+  font-size: 30px;
+  font-weight: 300;
+  background-color: #5fb523;
+  border: 1px solid #fbfbfb;
   border-radius: 5px;
-  height: 50%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
 }

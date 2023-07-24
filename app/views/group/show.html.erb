@@ -1,21 +1,26 @@
 <div class="group_container_show">
-
 <div class="title_show">
 <h1><%= @group.name %></h1>
 <p>$<%= @total %></p>
 </div>
 <% @group_items.each do |item| %>
-<div class="name_amount">
+<div class="group">
+<div class="amount-name">
 <h3><%= item.name%></h3>
 <p>$<%= item.amount %></p>
 </div>
+<div class="group_item">
+
+<%= image_tag item.icon_url if item.icon %>
+
 <p class="show_date"><%= item.created_at.strftime('%A, %B %d, %Y') %></p>
+</div>
+</div>
 <% end %>
-<%= link_to 'View Items', item_path(@group), class: 'view_link' %>
 </div>
 
-  <div class="add_new_container">
-<div class="add_new">
-<%= link_to 'Back to Group', group_index_path, class: 'back_to_group' %>
+  <div class="add_expenses_container">
+<div class="add_new_show">
+<%= link_to 'Add Expenses', new_item_path, class: 'new_item_link' %>
 </div>
 </div>

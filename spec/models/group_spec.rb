@@ -13,25 +13,17 @@ RSpec.describe Group, type: :model do
 
   describe 'validations' do
     it { should validate_presence_of(:name) }
-    it { should validate_presence_of(:icon) }
   end
 
   describe 'when creating a group' do
     it 'is valid with valid attributes' do
-      group = Group.new(name: 'Example Group', icon: 'group_icon', user:)
+      group = Group.new(name: 'Example Group', user:)
       expect(group).to be_valid
     end
 
     it 'is not valid without a name' do
-      group = Group.new(icon: 'group_icon', user:)
+      group = Group.new(user:)
       expect(group).not_to be_valid
     end
-
-    it 'is not valid without an icon' do
-      group = Group.new(name: 'Example Group', user:)
-      expect(group).not_to be_valid
-    end
-
-    # Additional tests...
   end
 end

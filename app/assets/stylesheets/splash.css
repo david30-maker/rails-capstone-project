@@ -1,0 +1,70 @@
+.splash_container {
+  margin: 10px;
+}
+
+.p-hey {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.p-welcome {
+  text-align: center;
+  font-size: 20px;
+}
+
+.log_in_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25%;
+}
+
+.sign_up {
+  width: 100%;
+  margin: 4px;
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+
+.sign_up:hover {
+  background-color: #3778c2;
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+.sign_up a {
+  margin-left: 50%;
+  color: #000;
+  text-decoration: none;
+}
+
+.log_in a {
+  margin-left: 50%;
+  color: #000;
+  text-decoration: none;
+}
+
+.sign_up a:hover {
+  text-decoration: underline;
+  color: #fbfbfb;
+}
+
+.log_in {
+  width: 100%;
+  margin: 4px;
+  padding: 10px;
+  background-color: #fbfbfb;
+}
+
+.log_in:hover {
+  background-color: #3778c2;
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+.log_in a:hover {
+  text-decoration: underline;
+  color: #fbfbfb;
+}
