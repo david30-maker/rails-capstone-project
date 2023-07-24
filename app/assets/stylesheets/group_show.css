@@ -1,4 +1,3 @@
-
 .group_container_show {
   margin-top: 50px;
   margin-bottom: 20px;
@@ -52,7 +51,6 @@
 }
 
 .add_expenses_container {
-  padding: 20px;
   border: 1px solid #5fb523;
   background-color: #5fb523;
   position: absolute;

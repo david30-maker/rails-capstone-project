@@ -2,7 +2,6 @@ require 'application_system_test_case'
 
 class GroupShowTest < ApplicationSystemTestCase
   include Devise::Test::IntegrationHelpers
-
   def setup
     @user = users(:one)
     @groups = groups.select { |group| group.user_id == @user.id }
