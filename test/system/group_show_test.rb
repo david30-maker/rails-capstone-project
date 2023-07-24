@@ -1,6 +1,5 @@
 require 'application_system_test_case'
 
-
 class GroupShowTest < ApplicationSystemTestCase
   include Devise::Test::IntegrationHelpers
   def setup
