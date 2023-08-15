@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BudgetApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>BudgetApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    >
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="BudgetApp - Manage Your Finances">
+  <meta property="og:description" content="Take control of your budget with BudgetApp. Track expenses and save wisely.">
+  <meta property="og:image" content="ror-capstone.png">
+  <meta property="og:url" content="URL to your BudgetApp's homepage">
+  <meta property="og:type" content="website">
 
-    <head>
-  <!-- Other meta tags, title, and other CSS/JS files... -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+
+  <!-- Font Awesome CSS -->
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <!-- Your application styles and scripts -->
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
 </head>
 
-
-<%= stylesheet_link_tag 'https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css', integrity: 'sha384-...' %>
-
-
-       <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://kit.fontawesome.com/b89b7c8adf.js" crossorigin="anonymous"></script>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-
-   <%= yield :meta_tags %>
-  </head>
-
-  <body>
-   <%= yield %>
-   <% if user_signed_in? %>
-      <%= render "shared/nav" %>
-    <% end %>
-  </body>
+<body>
+  <div class="splash_container">
+    <p class="p-hey">Hey, It's a splash screen</p>
+    <h1 class="p-welcome">Welcome to our BudgetApp!</h1>
+    <div class="log_in_container">
+      <div class="log_in">
+        <%= link_to "Log In", new_user_session_path %>
+      </div>
+      <div class="sign_up">
+        <%= link_to "Sign Up", new_user_registration_path %>
+      </div>
+    </div>
+  </div>
+  
+  <% if user_signed_in? %>
+    <%= render "shared/nav" %>
+  <% end %>
+</body>
 </html>
