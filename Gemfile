@@ -10,7 +10,6 @@ gem 'rails', '~> 7.0.5'
 gem 'sprockets-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -48,7 +47,7 @@ gem 'bootsnap', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem 'pg', '~> 1.5'
+
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :development, :test do
@@ -57,6 +56,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.2'
   gem 'faker', '~> 2.18'
   gem 'rspec-rails', '~> 6.0.3'
+  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
@@ -76,6 +76,11 @@ group :test do
   gem 'selenium-webdriver'
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webdrivers'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg', '~> 1.5'
 end
 
 gem 'rails-controller-testing'
