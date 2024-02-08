@@ -58,7 +58,6 @@ It is built with Ruby on Rails and PostgreSQL.It is a web application that allow
 </details>
 
 
-<!-- Features -->
 
 </ul>
 
