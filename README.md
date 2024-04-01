@@ -29,8 +29,6 @@
 > Daily Expense App helps you organize your expenses and keeps track of your expenses.
 It is built with Ruby on Rails and PostgreSQL.It is a web application that allows users to create an account and add their expenses.
 
-
-
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
