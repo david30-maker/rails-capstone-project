@@ -56,7 +56,6 @@ It is built with Ruby on Rails and PostgreSQL.It is a web application that allow
 </details>
 
 
-
 </ul>
 
 <h1>🚀 Live Demo</h1>
